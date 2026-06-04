@@ -1,0 +1,1 @@
+-- Indeksi za PostgreSQL upite koji se koriste u merenju performansi.

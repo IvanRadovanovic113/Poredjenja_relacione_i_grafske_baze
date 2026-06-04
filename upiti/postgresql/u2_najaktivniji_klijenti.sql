@@ -1,0 +1,4 @@
+-- U2: Najaktivniji klijenti
+-- Cilj upita je da prikaze klijente sa najvecim odlaznim prometom,
+-- brojem racuna i brojem aktivnih kartica.
+-- Upit koristi CTE izraze, spajanja i agregacije po klijentu.

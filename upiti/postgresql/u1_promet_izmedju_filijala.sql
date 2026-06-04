@@ -1,0 +1,4 @@
+-- U1: Promet izmedju filijala
+-- Cilj upita je da prikaze ukupan promet izmedju parova filijala.
+-- Upit koristi spajanje tabela Racun, Filijala i Transakcija,
+-- filtriranje transakcija i agregacije.
