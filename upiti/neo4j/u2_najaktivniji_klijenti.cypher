@@ -6,7 +6,7 @@
 //
 // Zasto je upit pogodan za poredjenje:
 // U grafskom modelu se za isti poslovni zahtev mora obilaziti vise veza:
-// Klijent -> Racun -> Transakcija i Klijent -> Racun -> Kartica.
+// Klijent -> Racun -[:TRANSAKCIJA]-> Racun i Klijent -> Racun -> Kartica.
 // Pored toga, rezultat zahteva vise odvojenih agregacija po klijentu.
 // Ovakav izvestajni upit prirodnije odgovara relacionoj bazi.
 
@@ -17,7 +17,7 @@ MATCH (k:Klijent)
 WHERE k.tip_kli = 'fizicko lice'
 
 CALL (k, pocetak_perioda) {
-    MATCH (k)-[:POSEDUJE]->(:Racun)-[:PLATILAC]->(t:Transakcija)
+    MATCH (k)-[:POSEDUJE]->(:Racun)-[t:TRANSAKCIJA]->(:Racun)
     WHERE t.status_trans = 'uspesna'
       AND t.datum_vreme_trans >= pocetak_perioda
     RETURN

@@ -36,15 +36,15 @@ def get_counts(n_trans):
 
 
 def gen_filijale(n):
-    return [
-        {
+    def jedna_filijala(i):
+        grad = fake.city()
+        return {
             'id_fil':     i + 1,
-            'naziv_fil':  f"Filijala {fake.city()}",
+            'naziv_fil':  f"Filijala {grad}",
             'adresa_fil': fake.street_address(),
-            'grad_fil':   fake.city(),
+            'grad_fil':   grad,
         }
-        for i in range(n)
-    ]
+    return [jedna_filijala(i) for i in range(n)]
 
 
 def gen_bankomati(n):
@@ -148,23 +148,25 @@ def gen_transakcije(n, n_racuni):
     return result
 
 
-def gen_ima_punomoc(n_klijenti):
+def gen_ima_punomoc(n_klijenti, n_racuni, racuni):
     n = max(5, n_klijenti // 5)
     seen = set()
     result = []
     attempts = 0
+    vlasnik_racuna = {r['id_rac']: r['id_kli'] for r in racuni}
     while len(result) < n and attempts < n * 20:
-        a = random.randint(1, n_klijenti)
-        b = random.randint(1, n_klijenti)
+        kli = random.randint(1, n_klijenti)
+        rac = random.randint(1, n_racuni)
         attempts += 1
-        if a == b or (a, b) in seen:
+        # klijent ne moze imati punomoc na svom sopstvenom racunu
+        if vlasnik_racuna.get(rac) == kli or (kli, rac) in seen:
             continue
-        seen.add((a, b))
+        seen.add((kli, rac))
         result.append({
-            'id_kli_vlasnik': a,
-            'id_kli_punomoc': b,
-            'datum_dodele':   fake.date_between(start_date='-5y', end_date='today').isoformat(),
-            'nivo_pristupa':  random.choice(['citanje', 'citanje_pisanje', 'puno']),
+            'id_kli':        kli,
+            'id_rac':        rac,
+            'datum_dodele':  fake.date_between(start_date='-5y', end_date='today').isoformat(),
+            'nivo_pristupa': random.choice(['citanje', 'citanje_pisanje', 'puno']),
         })
     return result
 
@@ -204,7 +206,7 @@ def main():
     racuni          = gen_racuni(counts['racuni'], counts['klijenti'], counts['filijale'])
     kartice         = gen_kartice(counts['kartice'], counts['racuni'])
     transakcije     = gen_transakcije(counts['transakcije'], counts['racuni'])
-    ima_punomoc     = gen_ima_punomoc(counts['klijenti'])
+    ima_punomoc     = gen_ima_punomoc(counts['klijenti'], counts['racuni'], racuni)
     gotovinska_trans = gen_gotovinska_trans(counts['racuni'], counts['bankomati'], counts['transakcije'])
 
     datasets = {

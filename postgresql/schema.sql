@@ -58,11 +58,11 @@ CREATE TABLE Transakcija (
 );
 
 CREATE TABLE Ima_Punomoc (
-    id_kli_vlasnik  INT NOT NULL REFERENCES Klijent(id_kli),
-    id_kli_punomoc  INT NOT NULL REFERENCES Klijent(id_kli),
+    id_kli          INT NOT NULL REFERENCES Klijent(id_kli),
+    id_rac          INT NOT NULL REFERENCES Racun(id_rac),
     datum_dodele    DATE,
     nivo_pristupa   VARCHAR(30),
-    PRIMARY KEY (id_kli_vlasnik, id_kli_punomoc)
+    PRIMARY KEY (id_kli, id_rac)
 );
 
 CREATE TABLE Gotovinska_Trans (

@@ -5,14 +5,13 @@
 //
 // Zasto je upit pogodan za poredjenje:
 // Upit u grafskom modelu mora da prodje kroz vise povezanih cvorova:
-// Filijala <- Racun -> Transakcija -> Racun -> Filijala.
+// Filijala <- Racun -[:TRANSAKCIJA]-> Racun -> Filijala.
 // Nakon pronalazenja putanja, vrse se filtriranje, grupisanje i agregacije.
 // Ovakav izvestajni upit je prirodniji za relacionu bazu.
 
 MATCH
     (rp:Racun)-[:OTVOREN_U]->(fp:Filijala),
-    (rp)-[:PLATILAC]->(t:Transakcija),
-    (t)-[:PRIMALAC]->(rr:Racun),
+    (rp)-[t:TRANSAKCIJA]->(rr:Racun),
     (rr)-[:OTVOREN_U]->(fr:Filijala)
 WHERE t.status_trans = 'uspesna'
   AND t.datum_vreme_trans >= '2022-01-01T00:00:00'

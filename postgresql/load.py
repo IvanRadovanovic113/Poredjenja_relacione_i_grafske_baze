@@ -16,7 +16,7 @@ from psycopg2.extras import execute_values
 
 DB_CONFIG = {
     'host':     os.environ.get('POSTGRES_HOST', 'localhost'),
-    'port':     int(os.environ.get('POSTGRES_PORT', '5432')),
+    'port':     int(os.environ.get('POSTGRES_PORT', '5433')),
     'dbname':   os.environ.get('POSTGRES_DB', 'bankdb'),
     'user':     os.environ.get('POSTGRES_USER', 'postgres'),
     'password': os.environ.get('POSTGRES_PASSWORD', 'postgres'),
@@ -104,9 +104,9 @@ def load_all(scale):
     ima_punomoc = load_json(scale, 'ima_punomoc')
     execute_values(cur,
         """INSERT INTO Ima_Punomoc
-           (id_kli_vlasnik, id_kli_punomoc, datum_dodele, nivo_pristupa)
+           (id_kli, id_rac, datum_dodele, nivo_pristupa)
            VALUES %s""",
-        [(r['id_kli_vlasnik'], r['id_kli_punomoc'],
+        [(r['id_kli'], r['id_rac'],
           r['datum_dodele'], r['nivo_pristupa'])
          for r in ima_punomoc])
     print(f"  Ima_Punomoc:   {len(ima_punomoc):>7}")

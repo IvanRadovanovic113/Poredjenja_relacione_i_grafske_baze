@@ -102,15 +102,6 @@ def load_all(scale):
         print(f"  :Kartica       {len(kartice):>7} nodes")
 
         transakcije = load_json(scale, 'transakcije')
-        run_batched(session,
-            """UNWIND $rows AS r
-               CREATE (:Transakcija {
-                   id_trans: r.id_trans, iznos_trans: r.iznos_trans,
-                   datum_vreme_trans: r.datum_vreme_trans, opis_trans: r.opis_trans,
-                   status_trans: r.status_trans
-               })""",
-            transakcije)
-        print(f"  :Transakcija   {len(transakcije):>7} nodes")
 
         # --- Relationships ---
         # Klijent -[:POSEDUJE]-> Racun
@@ -139,29 +130,26 @@ def load_all(scale):
             [{'id_rac': r['id_rac'], 'id_kar': r['id_kar']} for r in kartice])
         print(f"  [:IMA]         {len(kartice):>7} rels")
 
-        # Racun -[:PLATILAC]-> Transakcija
+        # Racun -[:TRANSAKCIJA]-> Racun  (transakcija je ivica, ne cvor)
         run_batched(session,
             """UNWIND $rows AS r
-               MATCH (ra:Racun {id_rac: r.id_rac_platilac}), (t:Transakcija {id_trans: r.id_trans})
-               CREATE (ra)-[:PLATILAC]->(t)""",
-            [{'id_rac_platilac': r['id_rac_platilac'], 'id_trans': r['id_trans']}
-             for r in transakcije])
-        print(f"  [:PLATILAC]    {len(transakcije):>7} rels")
-
-        # Transakcija -[:PRIMALAC]-> Racun
-        run_batched(session,
-            """UNWIND $rows AS r
-               MATCH (t:Transakcija {id_trans: r.id_trans}), (ra:Racun {id_rac: r.id_rac_primalac})
-               CREATE (t)-[:PRIMALAC]->(ra)""",
-            [{'id_trans': r['id_trans'], 'id_rac_primalac': r['id_rac_primalac']}
-             for r in transakcije])
-        print(f"  [:PRIMALAC]    {len(transakcije):>7} rels")
+               MATCH (platilac:Racun {id_rac: r.id_rac_platilac}),
+                     (primalac:Racun {id_rac: r.id_rac_primalac})
+               CREATE (platilac)-[:TRANSAKCIJA {
+                   id_trans: r.id_trans,
+                   iznos_trans: r.iznos_trans,
+                   datum_vreme_trans: r.datum_vreme_trans,
+                   opis_trans: r.opis_trans,
+                   status_trans: r.status_trans
+               }]->(primalac)""",
+            transakcije)
+        print(f"  [:TRANSAKCIJA] {len(transakcije):>7} rels")
 
         ima_punomoc = load_json(scale, 'ima_punomoc')
         run_batched(session,
             """UNWIND $rows AS r
-               MATCH (kv:Klijent {id_kli: r.id_kli_vlasnik}), (kp:Klijent {id_kli: r.id_kli_punomoc})
-               CREATE (kv)-[:IMA_PUNOMOC {datum_dodele: r.datum_dodele, nivo_pristupa: r.nivo_pristupa}]->(kp)""",
+               MATCH (k:Klijent {id_kli: r.id_kli}), (ra:Racun {id_rac: r.id_rac})
+               CREATE (k)-[:IMA_PUNOMOC {datum_dodele: r.datum_dodele, nivo_pristupa: r.nivo_pristupa}]->(ra)""",
             ima_punomoc)
         print(f"  [:IMA_PUNOMOC] {len(ima_punomoc):>7} rels")
 

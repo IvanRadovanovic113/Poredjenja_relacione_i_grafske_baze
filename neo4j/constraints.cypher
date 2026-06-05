@@ -3,4 +3,3 @@ CREATE CONSTRAINT bankomat_id IF NOT EXISTS FOR (n:Bankomat)    REQUIRE n.id_ban
 CREATE CONSTRAINT klijent_id  IF NOT EXISTS FOR (n:Klijent)     REQUIRE n.id_kli   IS UNIQUE;
 CREATE CONSTRAINT racun_id    IF NOT EXISTS FOR (n:Racun)        REQUIRE n.id_rac   IS UNIQUE;
 CREATE CONSTRAINT kartica_id  IF NOT EXISTS FOR (n:Kartica)      REQUIRE n.id_kar   IS UNIQUE;
-CREATE CONSTRAINT trans_id    IF NOT EXISTS FOR (n:Transakcija)  REQUIRE n.id_trans IS UNIQUE;
