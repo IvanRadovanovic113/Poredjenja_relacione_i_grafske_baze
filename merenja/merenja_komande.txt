@@ -1,0 +1,9 @@
+docker compose run --rm loader python run.py --scale 150
+python merenja/izmeri_upite.py --scale 150 --ponavljanja 10
+
+
+docker compose run --rm loader python run.py --scale 15000
+python merenja/izmeri_upite.py --scale 15000 --ponavljanja 10
+
+docker compose run --rm loader python run.py --scale 100000
+python merenja/izmeri_upite.py --scale 100000 --ponavljanja 10

@@ -1,0 +1,13 @@
+vreme_pokretanja,scale,baza,oznaka_upita,naziv_upita,broj_redova,broj_ponavljanja,min_ms,max_ms,prosek_ms,medijana_ms
+2026-06-04T17:07:11,150,PostgreSQL,U1,Promet izmedju filijala,11,10,0.748,2.041,1.079,1.039
+2026-06-04T17:07:11,150,Neo4j,U1,Promet izmedju filijala,11,10,3.074,4.19,3.546,3.536
+2026-06-04T17:07:11,150,PostgreSQL,U2,Najaktivniji klijenti,5,10,1.04,1.2,1.095,1.082
+2026-06-04T17:07:11,150,Neo4j,U2,Najaktivniji klijenti,5,10,4.818,9.215,5.758,5.331
+2026-06-04T17:07:34,15000,PostgreSQL,U1,Promet izmedju filijala,20,10,6.075,7.462,6.498,6.266
+2026-06-04T17:07:34,15000,Neo4j,U1,Promet izmedju filijala,20,10,20.643,35.232,23.383,21.727
+2026-06-04T17:07:34,15000,PostgreSQL,U2,Najaktivniji klijenti,20,10,2.909,7.809,3.811,3.246
+2026-06-04T17:07:34,15000,Neo4j,U2,Najaktivniji klijenti,20,10,921.467,1143.906,1040.453,1039.094
+2026-06-04T17:07:53,100000,PostgreSQL,U1,Promet izmedju filijala,20,10,6.287,7.716,6.652,6.49
+2026-06-04T17:07:53,100000,Neo4j,U1,Promet izmedju filijala,20,10,21.026,37.034,25.517,23.471
+2026-06-04T17:07:53,100000,PostgreSQL,U2,Najaktivniji klijenti,20,10,3.295,7.298,4.709,4.244
+2026-06-04T17:07:53,100000,Neo4j,U2,Najaktivniji klijenti,20,10,884.712,1047.171,961.84,965.32
