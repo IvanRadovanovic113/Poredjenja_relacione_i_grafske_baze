@@ -115,7 +115,11 @@ def gen_kartice(n, n_racuni):
     result = []
     for i in range(n):
         issued = fake.date_between(start_date='-5y', end_date='today')
-        expiry = issued.replace(year=issued.year + 5)
+        try:
+            expiry = issued.replace(year=issued.year + 5)
+        except ValueError:
+            # 29. februar — pomeri na 28.
+            expiry = issued.replace(year=issued.year + 5, day=28)
         result.append({
             'id_kar':              i + 1,
             'broj_kar':            fake.credit_card_number(),
@@ -131,19 +135,38 @@ def gen_kartice(n, n_racuni):
 def gen_transakcije(n, n_racuni):
     status_choices = ['uspesna', 'neuspesna', 'na_cekanju']
     result = []
+
+    # 10% racuna dobija 90% transakcija
+    n_hub = max(1, n_racuni // 10)
+    hub_racuni = random.sample(range(1, n_racuni + 1), n_hub)
+
     for i in range(n):
-        platilac = random.randint(1, n_racuni)
-        primalac = random.randint(1, n_racuni)
-        while primalac == platilac:
+        # 90% sanse da platilac bude hub racun
+        if random.random() < 0.9:
+            platilac = random.choice(hub_racuni)
+        else:
+            platilac = random.randint(1, n_racuni)
+
+        # 90% sanse da primalac bude hub racun
+        if random.random() < 0.9:
+            primalac = random.choice(hub_racuni)
+        else:
             primalac = random.randint(1, n_racuni)
+
+        while primalac == platilac:
+            if random.random() < 0.9:
+                primalac = random.choice(hub_racuni)
+            else:
+                primalac = random.randint(1, n_racuni)
+
         result.append({
-            'id_trans':           i + 1,
-            'iznos_trans':        round(random.uniform(1, 10000), 2),
-            'datum_vreme_trans':  fake.date_time_between(start_date='-5y', end_date='now').isoformat(),
-            'opis_trans':         fake.sentence(nb_words=4),
-            'status_trans':       random.choice(status_choices),
-            'id_rac_platilac':    platilac,
-            'id_rac_primalac':    primalac,
+            'id_trans':          i + 1,
+            'iznos_trans':       round(random.uniform(1, 10000), 2),
+            'datum_vreme_trans': fake.date_time_between(start_date='-5y', end_date='now').isoformat(),
+            'opis_trans':        fake.sentence(nb_words=4),
+            'status_trans':      random.choice(status_choices),
+            'id_rac_platilac':   platilac,
+            'id_rac_primalac':   primalac,
         })
     return result
 
