@@ -10,5 +10,5 @@ Fokus je na upitima koji obuhvataju:
 
 Za poredjenje su odabrana dva upita:
 
-1. Lanac transakcija (indirektni transfer novca)
-2. Finansijska povezanost klijenata (najkraci put)
+1. Doseznost racuna
+2. Detekcija kruznih transakcija
