@@ -32,7 +32,7 @@ ROOT_DIR = Path(__file__).resolve().parents[1]
 
 POSTGRES_CONFIG = {
     "host": os.environ.get("POSTGRES_HOST", "localhost"),
-    "port": int(os.environ.get("POSTGRES_PORT", "5432")),
+    "port": int(os.environ.get("POSTGRES_PORT", "5433")),
     "dbname": os.environ.get("POSTGRES_DB", "bankdb"),
     "user": os.environ.get("POSTGRES_USER", "postgres"),
     "password": os.environ.get("POSTGRES_PASSWORD", "postgres"),
@@ -54,6 +54,18 @@ UPITI = [
         "naziv": "Najaktivniji klijenti",
         "postgresql": ROOT_DIR / "upiti" / "postgresql" / "u2_najaktivniji_klijenti.sql",
         "neo4j": ROOT_DIR / "upiti" / "neo4j" / "u2_najaktivniji_klijenti.cypher",
+    },
+    {
+        "oznaka": "U3",
+        "naziv": "Doseznost racuna",
+        "postgresql": ROOT_DIR / "upiti" / "postgresql" / "u3_doseznost_racuna.sql",
+        "neo4j": ROOT_DIR / "upiti" / "neo4j" / "u3_doseznost_racuna.cypher",
+    },   
+    {
+        "oznaka": "U4",
+        "naziv": "Detekcija kruznih transakcija",
+        "postgresql": ROOT_DIR / "upiti" / "postgresql" / "u4_detekcija_kruznih_transakcija.sql",
+        "neo4j": ROOT_DIR / "upiti" / "neo4j" / "u4_detekcija_kruznih_transakcija.cypher",
     },
 ]
 
