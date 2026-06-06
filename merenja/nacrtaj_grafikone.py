@@ -217,6 +217,43 @@ def main() -> None:
         naziv_kolone="Prosecno vreme",
         izlazni_fajl=IZLAZNI_FOLDER / "u2_prosek.png",
     )
+    
+    nacrtaj_grafikon_za_upit(
+        rezultati=rezultati,
+        oznaka_upita="U3",
+        naziv_upita="Doseznost racuna",
+        kolona="medijana_ms",
+        naziv_kolone="Medijana vremena",
+        izlazni_fajl=IZLAZNI_FOLDER / "u3_medijana.png",
+    )
+
+    nacrtaj_grafikon_za_upit(
+        rezultati=rezultati,
+        oznaka_upita="U4",
+        naziv_upita="Kruzne transakcije",
+        kolona="medijana_ms",
+        naziv_kolone="Medijana vremena",
+        izlazni_fajl=IZLAZNI_FOLDER / "u4_medijana.png",
+    )
+
+    nacrtaj_grafikon_za_upit(
+        rezultati=rezultati,
+        oznaka_upita="U3",
+        naziv_upita="Doseznost racuna",
+        kolona="prosek_ms",
+        naziv_kolone="Prosecno vreme",
+        izlazni_fajl=IZLAZNI_FOLDER / "u3_prosek.png",
+    )
+
+    nacrtaj_grafikon_za_upit(
+        rezultati=rezultati,
+        oznaka_upita="U4",
+        naziv_upita="Kruzne transakcije",
+        kolona="prosek_ms",
+        naziv_kolone="Prosecno vreme",
+        izlazni_fajl=IZLAZNI_FOLDER / "u4_prosek.png",
+    )
+
 
     nacrtaj_odnos_brzine(
         rezultati=rezultati,

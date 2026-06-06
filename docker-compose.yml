@@ -44,6 +44,7 @@ services:
     build: .
     environment:
       POSTGRES_HOST: postgres
+      POSTGRES_PORT: 5432
       NEO4J_URI: bolt://neo4j:7687
     depends_on:
       postgres:
