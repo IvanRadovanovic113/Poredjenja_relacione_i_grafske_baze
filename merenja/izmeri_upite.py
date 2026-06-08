@@ -162,6 +162,7 @@ def izmeri_postgresql_upit(konekcija, sql: str) -> tuple[float, int]:
     pocetak = time.perf_counter()
 
     with konekcija.cursor() as kursor:
+        # kursor.execute("SET max_parallel_workers_per_gather = 0")
         kursor.execute(sql)
         redovi = kursor.fetchall()
 
