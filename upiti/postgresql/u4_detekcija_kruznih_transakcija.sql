@@ -12,22 +12,32 @@
 -- putem CTE-a, što drastično povećava kompleksnost i vreme 
 -- izvršenja kako se dubina pretrage i broj transakcija povećavaju.
 WITH Putanje AS (
-    SELECT t1.id_rac_platilac AS start_rac, t1.id_rac_primalac AS mid_rac, t1.id_rac_platilac AS end_rac, 2 AS duzina
+    SELECT t1.id_rac_platilac AS start_rac, 2 AS duzina
     FROM Transakcija t1
-    JOIN Transakcija t2 ON t1.id_rac_primalac = t2.id_rac_platilac AND t1.id_rac_platilac = t2.id_rac_primalac
-    WHERE t1.status_trans = 'uspesna' AND t2.status_trans = 'uspesna'
+    JOIN Transakcija t2
+        ON  t1.id_rac_primalac  = t2.id_rac_platilac
+        AND t1.id_rac_platilac  = t2.id_rac_primalac
+        AND t1.datum_vreme_trans < t2.datum_vreme_trans
+    WHERE t1.status_trans = 'uspesna'
+      AND t2.status_trans = 'uspesna'
 
     UNION ALL
 
-    SELECT t1.id_rac_platilac, t2.id_rac_primalac, t3.id_rac_primalac, 3 AS duzina
+    SELECT t1.id_rac_platilac, 3 AS duzina
     FROM Transakcija t1
-    JOIN Transakcija t2 ON t1.id_rac_primalac = t2.id_rac_platilac
-    JOIN Transakcija t3 ON t2.id_rac_primalac = t3.id_rac_platilac
-    WHERE t1.id_rac_platilac = t3.id_rac_primalac
-      AND t1.status_trans = 'uspesna' AND t2.status_trans = 'uspesna' AND t3.status_trans = 'uspesna'
+    JOIN Transakcija t2
+        ON  t1.id_rac_primalac  = t2.id_rac_platilac
+        AND t1.datum_vreme_trans < t2.datum_vreme_trans
+    JOIN Transakcija t3
+        ON  t2.id_rac_primalac  = t3.id_rac_platilac
+        AND t2.datum_vreme_trans < t3.datum_vreme_trans
+        AND t1.id_rac_platilac  = t3.id_rac_primalac
+    WHERE t1.status_trans = 'uspesna'
+      AND t2.status_trans = 'uspesna'
+      AND t3.status_trans = 'uspesna'
 )
 SELECT DISTINCT k.id_kli, k.ime_kli, k.prezime_kli, p.duzina
 FROM Putanje p
-JOIN Racun r ON r.id_rac = p.start_rac
+JOIN Racun r  ON r.id_rac  = p.start_rac
 JOIN Klijent k ON k.id_kli = r.id_kli
 LIMIT 20;
