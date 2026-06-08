@@ -140,7 +140,9 @@ def load_all(scale):
                    iznos_trans: r.iznos_trans,
                    datum_vreme_trans: r.datum_vreme_trans,
                    opis_trans: r.opis_trans,
-                   status_trans: r.status_trans
+                   status_trans: r.status_trans,
+                   semanticka_grupa_trans: r.semanticka_grupa_trans,
+                   embedding_trans: r.embedding_trans
                }]->(primalac)""",
             transakcije)
         print(f"  [:TRANSAKCIJA] {len(transakcije):>7} rels")

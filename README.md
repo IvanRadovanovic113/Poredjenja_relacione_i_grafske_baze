@@ -2,6 +2,8 @@
 
 Projekat za istraživački rad koji puni isti skup podataka u PostgreSQL i Neo4j u različitim obimima, radi poređenja performansi.
 
+Aktuelna verzija projekta dodatno uvodi kontrolisane semantičke opise transakcija i prave embeddinge preko modela `djovak/embedic-base`, kako bi se moglo porediti ponašanje vektorskih indeksa u relacionoj i graf bazi.
+
 ---
 
 ## Preduslovi
@@ -144,6 +146,74 @@ Preskočiti generisanje (reuse postojećih podataka):
 ```bash
 docker compose run --rm loader python run.py --scale 15000 --skip-generate
 ```
+
+---
+
+## Vektorski benchmark
+
+Opis transakcije se više ne generiše kao potpuno nasumična rečenica, već kroz semantičke klastere kao što su:
+
+- `plaćanje_kirije`
+- `pozajmica`
+- `neobičan_transfer`
+- `sumnjiva_uplata`
+- `hitna_uplata`
+- `rezije`
+
+Za svaki opis se generiše pravi embedding dimenzije `768` pomoću modela `djovak/embedic-base`. Model se preuzima unutar Docker okruženja i čuva u lokalnom folderu `model_cache/`, tako da se pri sledećim pokretanjima ne skida ponovo.
+
+Podrzana su tri glavna benchmark upita:
+
+1. Nadji transakcije slicne `plaćanje kirije`
+2. Nadji transakcije slicne `plaćanje kirije`, vece od `30.000 RSD`, u statusu `uspesna`, u poslednjih `12 meseci`
+3. Nadji racune sa punomoci koji ucestvuju u transakcijama slicnim `neobičan transfer` i koji su deo ciklusa duzine `2-3`
+
+### Pokretanje benchmarka
+
+```bash
+python merenja/izmeri_vektorske_upite.py
+```
+
+Primer sa promenjenim parametrima:
+
+```bash
+python merenja/izmeri_vektorske_upite.py \
+  --k 20 \
+  --pg-hnsw-m 32 \
+  --pg-hnsw-ef-search 120 \
+  --pg-ivf-lists 200 \
+  --pg-ivf-probes 20 \
+  --neo4j-hnsw-m 32 \
+  --neo4j-hnsw-ef-construction 200 \
+  --neo4j-quantization false
+```
+
+Napomena:
+- pri prvom pokretanju Docker ce preuzeti model `djovak/embedic-base`
+- model se zatim cuva u `model_cache/` i koristi se ponovo bez novog skidanja
+- za najbolji kvalitet opisi i upiti koriste srpsku latinicu sa dijakriticima (`č`, `ć`, `š`, `ž`, `đ`)
+
+Skripta cuva:
+
+- rezime metrika u `rezultati/vektorski_benchmark/rezime.csv`
+- detaljne top-k rezultate i score-ove u `rezultati/vektorski_benchmark/detalji.csv`
+
+Metrike koje se prate:
+
+- latencija upita: `avg`, `p50`, `p95`
+- vreme kreiranja indeksa
+- velicina indeksa na disku
+- vreme inserta novih transakcija sa embeddingom
+- `recall@k` u odnosu na PostgreSQL exact search
+- `overlap top-k` izmedju metoda
+
+### Grafikoni
+
+```bash
+python merenja/nacrtaj_vektorske_grafikone.py
+```
+
+Grafikoni se cuvaju u `rezultati/vektorski_benchmark/grafikoni/`.
 
 ---
 

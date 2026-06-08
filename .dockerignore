@@ -1,0 +1,6 @@
+data
+model_cache
+rezultati
+__pycache__
+*.pyc
+.git

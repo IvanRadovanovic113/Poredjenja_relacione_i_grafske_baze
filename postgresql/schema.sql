@@ -1,3 +1,5 @@
+CREATE EXTENSION IF NOT EXISTS vector;
+
 CREATE TABLE Filijala (
     id_fil      SERIAL PRIMARY KEY,
     naziv_fil   VARCHAR(200) NOT NULL,
@@ -48,13 +50,15 @@ CREATE TABLE Kartica (
 );
 
 CREATE TABLE Transakcija (
-    id_trans          SERIAL PRIMARY KEY,
-    iznos_trans       NUMERIC(15, 2) NOT NULL,
-    datum_vreme_trans TIMESTAMP,
-    opis_trans        TEXT,
-    status_trans      VARCHAR(20),
-    id_rac_platilac   INT NOT NULL REFERENCES Racun(id_rac),
-    id_rac_primalac   INT NOT NULL REFERENCES Racun(id_rac)
+    id_trans                SERIAL PRIMARY KEY,
+    iznos_trans             NUMERIC(15, 2) NOT NULL,
+    datum_vreme_trans       TIMESTAMP,
+    opis_trans              TEXT,
+    status_trans            VARCHAR(20),
+    semanticka_grupa_trans  VARCHAR(50),
+    embedding_trans         VECTOR(768),
+    id_rac_platilac         INT NOT NULL REFERENCES Racun(id_rac),
+    id_rac_primalac         INT NOT NULL REFERENCES Racun(id_rac)
 );
 
 CREATE TABLE Ima_Punomoc (

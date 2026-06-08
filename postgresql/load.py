@@ -31,6 +31,10 @@ def load_json(scale, name):
         return json.load(f)
 
 
+def to_vector_literal(values):
+    return '[' + ','.join(f'{value:.6f}' for value in values) + ']'
+
+
 def load_all(scale):
     conn = psycopg2.connect(**DB_CONFIG)
     cur = conn.cursor()
@@ -93,10 +97,12 @@ def load_all(scale):
     execute_values(cur,
         """INSERT INTO Transakcija
            (id_trans, iznos_trans, datum_vreme_trans, opis_trans,
-            status_trans, id_rac_platilac, id_rac_primalac)
+            status_trans, semanticka_grupa_trans, embedding_trans,
+            id_rac_platilac, id_rac_primalac)
            VALUES %s""",
         [(r['id_trans'], r['iznos_trans'], r['datum_vreme_trans'],
           r['opis_trans'], r['status_trans'],
+          r['semanticka_grupa_trans'], to_vector_literal(r['embedding_trans']),
           r['id_rac_platilac'], r['id_rac_primalac'])
          for r in transakcije])
     print(f"  Transakcija:   {len(transakcije):>7}")

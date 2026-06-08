@@ -1,0 +1,97 @@
+vreme_pokretanja,oznaka_upita,metod,rank,entity_id,label,score
+2026-06-08T09:09:55,V1,pg_exact,1,84,plaćanje kirije za maj,0.929621
+2026-06-08T09:09:55,V1,pg_exact,2,129,isplata zarade,0.924975
+2026-06-08T09:09:55,V1,pg_exact,3,3,isplata zarade,0.924975
+2026-06-08T09:09:55,V1,pg_exact,4,93,uplata plate,0.92429
+2026-06-08T09:09:55,V1,pg_exact,5,80,uplata plate,0.92429
+2026-06-08T09:09:55,V1,pg_exact,6,136,uplata plate,0.92429
+2026-06-08T09:09:55,V1,pg_exact,7,99,honorarna isplata,0.921908
+2026-06-08T09:09:55,V1,pg_exact,8,21,honorarna isplata,0.921908
+2026-06-08T09:09:55,V1,pg_exact,9,36,plaćanje kirije za jun,0.921881
+2026-06-08T09:09:55,V1,pg_exact,10,31,plaćanje kirije za jul nalog,0.919853
+2026-06-08T09:09:55,V2,pg_exact,1,129,isplata zarade,0.924975
+2026-06-08T09:09:55,V2,pg_exact,2,136,uplata plate,0.92429
+2026-06-08T09:09:55,V2,pg_exact,3,80,uplata plate,0.92429
+2026-06-08T09:09:55,V2,pg_exact,4,93,uplata plate,0.92429
+2026-06-08T09:09:55,V2,pg_exact,5,99,honorarna isplata,0.921908
+2026-06-08T09:09:55,V2,pg_exact,6,21,honorarna isplata,0.921908
+2026-06-08T09:09:55,V2,pg_exact,7,36,plaćanje kirije za jun,0.921881
+2026-06-08T09:09:55,V2,pg_exact,8,31,plaćanje kirije za jul nalog,0.919853
+2026-06-08T09:09:55,V2,pg_exact,9,124,uplata za porodične troškove,0.898508
+2026-06-08T09:09:55,V2,pg_exact,10,106,uplata za porodične troškove,0.898508
+2026-06-08T09:09:55,V3,pg_exact,1,5,5,1.0
+2026-06-08T09:09:55,V3,pg_exact,2,10,10,1.0
+2026-06-08T09:09:55,V3,pg_exact,3,20,20,1.0
+2026-06-08T09:09:55,V3,pg_exact,4,29,29,1.0
+2026-06-08T09:09:55,V1,pg_hnsw,1,84,plaćanje kirije za maj,0.929621
+2026-06-08T09:09:55,V1,pg_hnsw,2,129,isplata zarade,0.924975
+2026-06-08T09:09:55,V1,pg_hnsw,3,3,isplata zarade,0.924975
+2026-06-08T09:09:55,V1,pg_hnsw,4,93,uplata plate,0.92429
+2026-06-08T09:09:55,V1,pg_hnsw,5,80,uplata plate,0.92429
+2026-06-08T09:09:55,V1,pg_hnsw,6,136,uplata plate,0.92429
+2026-06-08T09:09:55,V1,pg_hnsw,7,99,honorarna isplata,0.921908
+2026-06-08T09:09:55,V1,pg_hnsw,8,21,honorarna isplata,0.921908
+2026-06-08T09:09:55,V1,pg_hnsw,9,36,plaćanje kirije za jun,0.921881
+2026-06-08T09:09:55,V1,pg_hnsw,10,31,plaćanje kirije za jul nalog,0.919853
+2026-06-08T09:09:55,V2,pg_hnsw,1,129,isplata zarade,0.924975
+2026-06-08T09:09:55,V2,pg_hnsw,2,136,uplata plate,0.92429
+2026-06-08T09:09:55,V2,pg_hnsw,3,80,uplata plate,0.92429
+2026-06-08T09:09:55,V2,pg_hnsw,4,93,uplata plate,0.92429
+2026-06-08T09:09:55,V2,pg_hnsw,5,99,honorarna isplata,0.921908
+2026-06-08T09:09:55,V2,pg_hnsw,6,21,honorarna isplata,0.921908
+2026-06-08T09:09:55,V2,pg_hnsw,7,36,plaćanje kirije za jun,0.921881
+2026-06-08T09:09:55,V2,pg_hnsw,8,31,plaćanje kirije za jul nalog,0.919853
+2026-06-08T09:09:55,V2,pg_hnsw,9,124,uplata za porodične troškove,0.898508
+2026-06-08T09:09:55,V2,pg_hnsw,10,106,uplata za porodične troškove,0.898508
+2026-06-08T09:09:55,V3,pg_hnsw,1,5,5,1.0
+2026-06-08T09:09:55,V3,pg_hnsw,2,10,10,1.0
+2026-06-08T09:09:55,V3,pg_hnsw,3,20,20,1.0
+2026-06-08T09:09:55,V3,pg_hnsw,4,29,29,1.0
+2026-06-08T09:09:55,V1,pg_ivfflat,1,84,plaćanje kirije za maj,0.929621
+2026-06-08T09:09:55,V1,pg_ivfflat,2,129,isplata zarade,0.924975
+2026-06-08T09:09:55,V1,pg_ivfflat,3,3,isplata zarade,0.924975
+2026-06-08T09:09:55,V1,pg_ivfflat,4,93,uplata plate,0.92429
+2026-06-08T09:09:55,V1,pg_ivfflat,5,80,uplata plate,0.92429
+2026-06-08T09:09:55,V1,pg_ivfflat,6,136,uplata plate,0.92429
+2026-06-08T09:09:55,V1,pg_ivfflat,7,99,honorarna isplata,0.921908
+2026-06-08T09:09:55,V1,pg_ivfflat,8,21,honorarna isplata,0.921908
+2026-06-08T09:09:55,V1,pg_ivfflat,9,36,plaćanje kirije za jun,0.921881
+2026-06-08T09:09:55,V1,pg_ivfflat,10,31,plaćanje kirije za jul nalog,0.919853
+2026-06-08T09:09:55,V2,pg_ivfflat,1,129,isplata zarade,0.924975
+2026-06-08T09:09:55,V2,pg_ivfflat,2,136,uplata plate,0.92429
+2026-06-08T09:09:55,V2,pg_ivfflat,3,80,uplata plate,0.92429
+2026-06-08T09:09:55,V2,pg_ivfflat,4,93,uplata plate,0.92429
+2026-06-08T09:09:55,V2,pg_ivfflat,5,99,honorarna isplata,0.921908
+2026-06-08T09:09:55,V2,pg_ivfflat,6,21,honorarna isplata,0.921908
+2026-06-08T09:09:55,V2,pg_ivfflat,7,36,plaćanje kirije za jun,0.921881
+2026-06-08T09:09:55,V2,pg_ivfflat,8,31,plaćanje kirije za jul nalog,0.919853
+2026-06-08T09:09:55,V2,pg_ivfflat,9,124,uplata za porodične troškove,0.898508
+2026-06-08T09:09:55,V2,pg_ivfflat,10,106,uplata za porodične troškove,0.898508
+2026-06-08T09:09:55,V3,pg_ivfflat,1,5,5,1.0
+2026-06-08T09:09:55,V3,pg_ivfflat,2,10,10,1.0
+2026-06-08T09:09:55,V3,pg_ivfflat,3,20,20,1.0
+2026-06-08T09:09:55,V3,pg_ivfflat,4,29,29,1.0
+2026-06-08T09:09:55,V1,neo4j_hnsw,1,84,plaćanje kirije za maj,0.964341
+2026-06-08T09:09:55,V1,neo4j_hnsw,2,3,isplata zarade,0.962096
+2026-06-08T09:09:55,V1,neo4j_hnsw,3,129,isplata zarade,0.962096
+2026-06-08T09:09:55,V1,neo4j_hnsw,4,80,uplata plate,0.961967
+2026-06-08T09:09:55,V1,neo4j_hnsw,5,93,uplata plate,0.961967
+2026-06-08T09:09:55,V1,neo4j_hnsw,6,136,uplata plate,0.961967
+2026-06-08T09:09:55,V1,neo4j_hnsw,7,36,plaćanje kirije za jun,0.960562
+2026-06-08T09:09:55,V1,neo4j_hnsw,8,21,honorarna isplata,0.960558
+2026-06-08T09:09:55,V1,neo4j_hnsw,9,99,honorarna isplata,0.960558
+2026-06-08T09:09:55,V1,neo4j_hnsw,10,31,plaćanje kirije za jul nalog,0.95912
+2026-06-08T09:09:55,V2,neo4j_hnsw,1,129,isplata zarade,0.962096
+2026-06-08T09:09:55,V2,neo4j_hnsw,2,80,uplata plate,0.961967
+2026-06-08T09:09:55,V2,neo4j_hnsw,3,93,uplata plate,0.961967
+2026-06-08T09:09:55,V2,neo4j_hnsw,4,136,uplata plate,0.961967
+2026-06-08T09:09:55,V2,neo4j_hnsw,5,36,plaćanje kirije za jun,0.960562
+2026-06-08T09:09:55,V2,neo4j_hnsw,6,21,honorarna isplata,0.960558
+2026-06-08T09:09:55,V2,neo4j_hnsw,7,99,honorarna isplata,0.960558
+2026-06-08T09:09:55,V2,neo4j_hnsw,8,31,plaćanje kirije za jul nalog,0.95912
+2026-06-08T09:09:55,V2,neo4j_hnsw,9,106,uplata za porodične troškove,0.948662
+2026-06-08T09:09:55,V2,neo4j_hnsw,10,124,uplata za porodične troškove,0.948662
+2026-06-08T09:09:55,V3,neo4j_hnsw,1,5,GB11YSWA96705466889373,0.999785
+2026-06-08T09:09:55,V3,neo4j_hnsw,2,10,GB43UHDW49190586518506,0.999785
+2026-06-08T09:09:55,V3,neo4j_hnsw,3,20,GB55HJWJ71349361832421,0.999785
+2026-06-08T09:09:55,V3,neo4j_hnsw,4,29,GB36VZUE70289517187026,0.999785

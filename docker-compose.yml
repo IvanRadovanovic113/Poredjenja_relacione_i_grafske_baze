@@ -1,12 +1,12 @@
 services:
   postgres:
-    image: postgres:16
+    image: pgvector/pgvector:pg16
     environment:
       POSTGRES_DB: bankdb
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
     ports:
-      - "5433:5432"
+      - "55433:5432"
     volumes:
       - pgdata:/var/lib/postgresql/data
     healthcheck:
@@ -46,6 +46,12 @@ services:
       POSTGRES_HOST: postgres
       POSTGRES_PORT: 5432
       NEO4J_URI: bolt://neo4j:7687
+      EMBEDDING_MODEL_NAME: djovak/embedic-base
+      HF_HOME: /model_cache/huggingface
+      TRANSFORMERS_CACHE: /model_cache/huggingface
+      SENTENCE_TRANSFORMERS_HOME: /model_cache/sentence_transformers
+      HUGGINGFACE_HUB_TOKEN: ${HUGGINGFACE_HUB_TOKEN}
+      HF_TOKEN: ${HUGGINGFACE_HUB_TOKEN}
     depends_on:
       postgres:
         condition: service_healthy
@@ -53,6 +59,8 @@ services:
         condition: service_healthy
     volumes:
       - ./data:/app/data
+      - ./rezultati:/app/rezultati
+      - ./model_cache:/model_cache
     profiles:
       - loader
 

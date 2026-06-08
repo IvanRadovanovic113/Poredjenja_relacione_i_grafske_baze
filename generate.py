@@ -13,6 +13,7 @@ import json
 import os
 import random
 from faker import Faker
+from semantic_vectors import embed_texts, generate_semantic_payload, SEMANTIC_GROUPS
 
 fake = Faker('hr_HR')
 
@@ -133,7 +134,6 @@ def gen_kartice(n, n_racuni):
 
 
 def gen_transakcije(n, n_racuni):
-    status_choices = ['uspesna', 'neuspesna', 'na_cekanju']
     result = []
 
     # 10% racuna dobija 90% transakcija
@@ -141,6 +141,9 @@ def gen_transakcije(n, n_racuni):
     hub_racuni = random.sample(range(1, n_racuni + 1), n_hub)
 
     for i in range(n):
+        payload = generate_semantic_payload(random)
+        group_spec = SEMANTIC_GROUPS[payload['semanticka_grupa_trans']]
+
         # 90% sanse da platilac bude hub racun
         if random.random() < 0.9:
             platilac = random.choice(hub_racuni)
@@ -159,16 +162,74 @@ def gen_transakcije(n, n_racuni):
             else:
                 primalac = random.randint(1, n_racuni)
 
+        if random.random() < group_spec['recent_probability']:
+            datum_vreme = fake.date_time_between(start_date='-365d', end_date='now').isoformat()
+        else:
+            datum_vreme = fake.date_time_between(start_date='-5y', end_date='-365d').isoformat()
+
         result.append({
-            'id_trans':          i + 1,
-            'iznos_trans':       round(random.uniform(1, 10000), 2),
-            'datum_vreme_trans': fake.date_time_between(start_date='-5y', end_date='now').isoformat(),
-            'opis_trans':        fake.sentence(nb_words=4),
-            'status_trans':      random.choice(status_choices),
-            'id_rac_platilac':   platilac,
-            'id_rac_primalac':   primalac,
+            'id_trans':               i + 1,
+            'iznos_trans':            payload['iznos_trans'],
+            'datum_vreme_trans':      datum_vreme,
+            'opis_trans':             payload['opis_trans'],
+            'status_trans':           payload['status_trans'],
+            'semanticka_grupa_trans': payload['semanticka_grupa_trans'],
+            'id_rac_platilac':        platilac,
+            'id_rac_primalac':        primalac,
         })
+
+    embeddingi = embed_texts([red['opis_trans'] for red in result])
+    for red, embedding in zip(result, embeddingi):
+        red['embedding_trans'] = embedding
+
     return result
+
+
+def obogati_transakcije_posebnim_obrascima(transakcije, ima_punomoc, n_racuni):
+    if not transakcije:
+        return transakcije
+
+    racuni_sa_punomocjem = sorted({red['id_rac'] for red in ima_punomoc})
+    if len(racuni_sa_punomocjem) < 3:
+        racuni_sa_punomocjem = list(range(1, min(n_racuni, 6) + 1))
+
+    if len(racuni_sa_punomocjem) < 3:
+        return transakcije
+
+    broj_ciklusa = max(2, min(len(transakcije) // 2000 + 2, 8))
+    pocetak = max(0, len(transakcije) - broj_ciklusa * 5)
+
+    for pomeraj in range(0, broj_ciklusa * 5, 5):
+        baza = pocetak + pomeraj
+        if baza + 4 >= len(transakcije):
+            break
+
+        a, b, c = random.sample(racuni_sa_punomocjem, 3)
+        zapisi = [
+            (baza + 0, a, b, "neobičan transfer", round(random.uniform(18000, 60000), 2)),
+            (baza + 1, b, a, "neuobičajen prenos sredstava", round(random.uniform(18000, 60000), 2)),
+            (baza + 2, a, b, "specijalan prenos bez standardne osnove", round(random.uniform(25000, 90000), 2)),
+            (baza + 3, b, c, "transfer po hitnom dogovoru", round(random.uniform(25000, 90000), 2)),
+            (baza + 4, c, a, "prenos po internom dogovoru", round(random.uniform(25000, 90000), 2)),
+        ]
+
+        for index, platilac, primalac, opis, iznos in zapisi:
+            timestamp = fake.date_time_between(start_date='-300d', end_date='now').isoformat()
+            transakcije[index].update({
+                'iznos_trans': iznos,
+                'datum_vreme_trans': timestamp,
+                'opis_trans': opis,
+                'status_trans': 'uspesna',
+                'semanticka_grupa_trans': 'neobican_transfer',
+                'id_rac_platilac': platilac,
+                'id_rac_primalac': primalac,
+            })
+
+    embeddingi = embed_texts([red['opis_trans'] for red in transakcije[pocetak:]])
+    for red, embedding in zip(transakcije[pocetak:], embeddingi):
+        red['embedding_trans'] = embedding
+
+    return transakcije
 
 
 def gen_ima_punomoc(n_klijenti, n_racuni, racuni):
@@ -228,8 +289,11 @@ def main():
     klijenti        = gen_klijenti(counts['klijenti'])
     racuni          = gen_racuni(counts['racuni'], counts['klijenti'], counts['filijale'])
     kartice         = gen_kartice(counts['kartice'], counts['racuni'])
-    transakcije     = gen_transakcije(counts['transakcije'], counts['racuni'])
     ima_punomoc     = gen_ima_punomoc(counts['klijenti'], counts['racuni'], racuni)
+    transakcije     = gen_transakcije(counts['transakcije'], counts['racuni'])
+    transakcije     = obogati_transakcije_posebnim_obrascima(
+        transakcije, ima_punomoc, counts['racuni']
+    )
     gotovinska_trans = gen_gotovinska_trans(counts['racuni'], counts['bankomati'], counts['transakcije'])
 
     datasets = {
