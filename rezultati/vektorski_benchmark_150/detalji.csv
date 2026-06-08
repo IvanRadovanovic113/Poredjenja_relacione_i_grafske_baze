@@ -1,0 +1,241 @@
+vreme_pokretanja,scale,oznaka_upita,metod,parametri,rank,entity_id,label,score
+2026-06-08T11:29:15,150,V1,pg_exact,exact,1,3,isplata zarade,0.924975
+2026-06-08T11:29:15,150,V1,pg_exact,exact,2,129,isplata zarade,0.924975
+2026-06-08T11:29:15,150,V1,pg_exact,exact,3,80,uplata plate,0.92429
+2026-06-08T11:29:15,150,V1,pg_exact,exact,4,93,uplata plate,0.92429
+2026-06-08T11:29:15,150,V1,pg_exact,exact,5,136,uplata plate,0.92429
+2026-06-08T11:29:15,150,V1,pg_exact,exact,6,21,honorarna isplata,0.921908
+2026-06-08T11:29:15,150,V1,pg_exact,exact,7,99,honorarna isplata,0.921908
+2026-06-08T11:29:15,150,V1,pg_exact,exact,8,100,plaćanje anuiteta,0.908697
+2026-06-08T11:29:15,150,V1,pg_exact,exact,9,20,plaćanje anuiteta,0.908697
+2026-06-08T11:29:15,150,V1,pg_exact,exact,10,105,uplata za komunalije,0.905076
+2026-06-08T11:29:15,150,V2,pg_exact,exact,1,107,uplata za iznajmljeni poslovni prostor prema dogovorenom mesečnom iznosu,0.950808
+2026-06-08T11:29:15,150,V2,pg_exact,exact,2,42,redovna uplata za najam poslovni prostor za mesec februar,0.920186
+2026-06-08T11:29:15,150,V2,pg_exact,exact,3,60,uplata stanodavcu za korišćenje poslovni prostor,0.919571
+2026-06-08T11:29:15,150,V2,pg_exact,exact,4,31,redovna mesečna uplata za zakup kancelarija 5 nalog,0.902908
+2026-06-08T11:29:15,150,V2,pg_exact,exact,5,140,mesečna obaveza za zakup prostora označenog kao stan 12,0.898162
+2026-06-08T11:29:15,150,V2,pg_exact,exact,6,8,uplata za iznajmljeni garsonjera prema dogovorenom mesečnom iznosu,0.894922
+2026-06-08T11:29:15,150,V2,pg_exact,exact,7,102,mesečna obaveza za zakup prostora označenog kao stan b7 upl.,0.886819
+2026-06-08T11:29:15,150,V2,pg_exact,exact,8,71,mesečna obaveza po kreditu,0.872848
+2026-06-08T11:29:15,150,V2,pg_exact,exact,9,49,uplata za iznajmljeni stan 18 prema dogovorenom mesečnom iznosu trf.,0.866716
+2026-06-08T11:29:15,150,V2,pg_exact,exact,10,89,redovna uplata za najam stan b7 za mesec januar,0.866612
+2026-06-08T11:29:15,150,V3,pg_exact,exact,1,5,5,0.939436
+2026-06-08T11:29:15,150,V3,pg_exact,exact,2,10,10,0.939436
+2026-06-08T11:29:15,150,V3,pg_exact,exact,3,20,20,0.939436
+2026-06-08T11:29:15,150,V3,pg_exact,exact,4,29,29,0.939436
+2026-06-08T11:29:15,150,V1,pg_hnsw,m=16;ef_construction=64;ef_search=80,1,3,isplata zarade,0.924975
+2026-06-08T11:29:15,150,V1,pg_hnsw,m=16;ef_construction=64;ef_search=80,2,129,isplata zarade,0.924975
+2026-06-08T11:29:15,150,V1,pg_hnsw,m=16;ef_construction=64;ef_search=80,3,80,uplata plate,0.92429
+2026-06-08T11:29:15,150,V1,pg_hnsw,m=16;ef_construction=64;ef_search=80,4,93,uplata plate,0.92429
+2026-06-08T11:29:15,150,V1,pg_hnsw,m=16;ef_construction=64;ef_search=80,5,136,uplata plate,0.92429
+2026-06-08T11:29:15,150,V1,pg_hnsw,m=16;ef_construction=64;ef_search=80,6,21,honorarna isplata,0.921908
+2026-06-08T11:29:15,150,V1,pg_hnsw,m=16;ef_construction=64;ef_search=80,7,99,honorarna isplata,0.921908
+2026-06-08T11:29:15,150,V1,pg_hnsw,m=16;ef_construction=64;ef_search=80,8,100,plaćanje anuiteta,0.908697
+2026-06-08T11:29:15,150,V1,pg_hnsw,m=16;ef_construction=64;ef_search=80,9,20,plaćanje anuiteta,0.908697
+2026-06-08T11:29:15,150,V1,pg_hnsw,m=16;ef_construction=64;ef_search=80,10,105,uplata za komunalije,0.905076
+2026-06-08T11:29:15,150,V2,pg_hnsw,m=16;ef_construction=64;ef_search=80,1,107,uplata za iznajmljeni poslovni prostor prema dogovorenom mesečnom iznosu,0.950808
+2026-06-08T11:29:15,150,V2,pg_hnsw,m=16;ef_construction=64;ef_search=80,2,42,redovna uplata za najam poslovni prostor za mesec februar,0.920186
+2026-06-08T11:29:15,150,V2,pg_hnsw,m=16;ef_construction=64;ef_search=80,3,60,uplata stanodavcu za korišćenje poslovni prostor,0.919571
+2026-06-08T11:29:15,150,V2,pg_hnsw,m=16;ef_construction=64;ef_search=80,4,31,redovna mesečna uplata za zakup kancelarija 5 nalog,0.902908
+2026-06-08T11:29:15,150,V2,pg_hnsw,m=16;ef_construction=64;ef_search=80,5,140,mesečna obaveza za zakup prostora označenog kao stan 12,0.898162
+2026-06-08T11:29:15,150,V2,pg_hnsw,m=16;ef_construction=64;ef_search=80,6,8,uplata za iznajmljeni garsonjera prema dogovorenom mesečnom iznosu,0.894922
+2026-06-08T11:29:15,150,V2,pg_hnsw,m=16;ef_construction=64;ef_search=80,7,102,mesečna obaveza za zakup prostora označenog kao stan b7 upl.,0.886819
+2026-06-08T11:29:15,150,V2,pg_hnsw,m=16;ef_construction=64;ef_search=80,8,71,mesečna obaveza po kreditu,0.872848
+2026-06-08T11:29:15,150,V2,pg_hnsw,m=16;ef_construction=64;ef_search=80,9,49,uplata za iznajmljeni stan 18 prema dogovorenom mesečnom iznosu trf.,0.866716
+2026-06-08T11:29:15,150,V2,pg_hnsw,m=16;ef_construction=64;ef_search=80,10,89,redovna uplata za najam stan b7 za mesec januar,0.866612
+2026-06-08T11:29:15,150,V3,pg_hnsw,m=16;ef_construction=64;ef_search=80,1,5,5,0.939436
+2026-06-08T11:29:15,150,V3,pg_hnsw,m=16;ef_construction=64;ef_search=80,2,10,10,0.939436
+2026-06-08T11:29:15,150,V3,pg_hnsw,m=16;ef_construction=64;ef_search=80,3,20,20,0.939436
+2026-06-08T11:29:15,150,V3,pg_hnsw,m=16;ef_construction=64;ef_search=80,4,29,29,0.939436
+2026-06-08T11:29:15,150,V1,pg_hnsw,m=24;ef_construction=96;ef_search=120,1,3,isplata zarade,0.924975
+2026-06-08T11:29:15,150,V1,pg_hnsw,m=24;ef_construction=96;ef_search=120,2,129,isplata zarade,0.924975
+2026-06-08T11:29:15,150,V1,pg_hnsw,m=24;ef_construction=96;ef_search=120,3,80,uplata plate,0.92429
+2026-06-08T11:29:15,150,V1,pg_hnsw,m=24;ef_construction=96;ef_search=120,4,93,uplata plate,0.92429
+2026-06-08T11:29:15,150,V1,pg_hnsw,m=24;ef_construction=96;ef_search=120,5,136,uplata plate,0.92429
+2026-06-08T11:29:15,150,V1,pg_hnsw,m=24;ef_construction=96;ef_search=120,6,21,honorarna isplata,0.921908
+2026-06-08T11:29:15,150,V1,pg_hnsw,m=24;ef_construction=96;ef_search=120,7,99,honorarna isplata,0.921908
+2026-06-08T11:29:15,150,V1,pg_hnsw,m=24;ef_construction=96;ef_search=120,8,100,plaćanje anuiteta,0.908697
+2026-06-08T11:29:15,150,V1,pg_hnsw,m=24;ef_construction=96;ef_search=120,9,20,plaćanje anuiteta,0.908697
+2026-06-08T11:29:15,150,V1,pg_hnsw,m=24;ef_construction=96;ef_search=120,10,105,uplata za komunalije,0.905076
+2026-06-08T11:29:15,150,V2,pg_hnsw,m=24;ef_construction=96;ef_search=120,1,107,uplata za iznajmljeni poslovni prostor prema dogovorenom mesečnom iznosu,0.950808
+2026-06-08T11:29:15,150,V2,pg_hnsw,m=24;ef_construction=96;ef_search=120,2,42,redovna uplata za najam poslovni prostor za mesec februar,0.920186
+2026-06-08T11:29:15,150,V2,pg_hnsw,m=24;ef_construction=96;ef_search=120,3,60,uplata stanodavcu za korišćenje poslovni prostor,0.919571
+2026-06-08T11:29:15,150,V2,pg_hnsw,m=24;ef_construction=96;ef_search=120,4,31,redovna mesečna uplata za zakup kancelarija 5 nalog,0.902908
+2026-06-08T11:29:15,150,V2,pg_hnsw,m=24;ef_construction=96;ef_search=120,5,140,mesečna obaveza za zakup prostora označenog kao stan 12,0.898162
+2026-06-08T11:29:15,150,V2,pg_hnsw,m=24;ef_construction=96;ef_search=120,6,8,uplata za iznajmljeni garsonjera prema dogovorenom mesečnom iznosu,0.894922
+2026-06-08T11:29:15,150,V2,pg_hnsw,m=24;ef_construction=96;ef_search=120,7,102,mesečna obaveza za zakup prostora označenog kao stan b7 upl.,0.886819
+2026-06-08T11:29:15,150,V2,pg_hnsw,m=24;ef_construction=96;ef_search=120,8,71,mesečna obaveza po kreditu,0.872848
+2026-06-08T11:29:15,150,V2,pg_hnsw,m=24;ef_construction=96;ef_search=120,9,49,uplata za iznajmljeni stan 18 prema dogovorenom mesečnom iznosu trf.,0.866716
+2026-06-08T11:29:15,150,V2,pg_hnsw,m=24;ef_construction=96;ef_search=120,10,89,redovna uplata za najam stan b7 za mesec januar,0.866612
+2026-06-08T11:29:15,150,V3,pg_hnsw,m=24;ef_construction=96;ef_search=120,1,5,5,0.939436
+2026-06-08T11:29:15,150,V3,pg_hnsw,m=24;ef_construction=96;ef_search=120,2,10,10,0.939436
+2026-06-08T11:29:15,150,V3,pg_hnsw,m=24;ef_construction=96;ef_search=120,3,20,20,0.939436
+2026-06-08T11:29:15,150,V3,pg_hnsw,m=24;ef_construction=96;ef_search=120,4,29,29,0.939436
+2026-06-08T11:29:15,150,V1,pg_hnsw,m=32;ef_construction=128;ef_search=160,1,3,isplata zarade,0.924975
+2026-06-08T11:29:15,150,V1,pg_hnsw,m=32;ef_construction=128;ef_search=160,2,129,isplata zarade,0.924975
+2026-06-08T11:29:15,150,V1,pg_hnsw,m=32;ef_construction=128;ef_search=160,3,80,uplata plate,0.92429
+2026-06-08T11:29:15,150,V1,pg_hnsw,m=32;ef_construction=128;ef_search=160,4,93,uplata plate,0.92429
+2026-06-08T11:29:15,150,V1,pg_hnsw,m=32;ef_construction=128;ef_search=160,5,136,uplata plate,0.92429
+2026-06-08T11:29:15,150,V1,pg_hnsw,m=32;ef_construction=128;ef_search=160,6,21,honorarna isplata,0.921908
+2026-06-08T11:29:15,150,V1,pg_hnsw,m=32;ef_construction=128;ef_search=160,7,99,honorarna isplata,0.921908
+2026-06-08T11:29:15,150,V1,pg_hnsw,m=32;ef_construction=128;ef_search=160,8,100,plaćanje anuiteta,0.908697
+2026-06-08T11:29:15,150,V1,pg_hnsw,m=32;ef_construction=128;ef_search=160,9,20,plaćanje anuiteta,0.908697
+2026-06-08T11:29:15,150,V1,pg_hnsw,m=32;ef_construction=128;ef_search=160,10,105,uplata za komunalije,0.905076
+2026-06-08T11:29:15,150,V2,pg_hnsw,m=32;ef_construction=128;ef_search=160,1,107,uplata za iznajmljeni poslovni prostor prema dogovorenom mesečnom iznosu,0.950808
+2026-06-08T11:29:15,150,V2,pg_hnsw,m=32;ef_construction=128;ef_search=160,2,42,redovna uplata za najam poslovni prostor za mesec februar,0.920186
+2026-06-08T11:29:15,150,V2,pg_hnsw,m=32;ef_construction=128;ef_search=160,3,60,uplata stanodavcu za korišćenje poslovni prostor,0.919571
+2026-06-08T11:29:15,150,V2,pg_hnsw,m=32;ef_construction=128;ef_search=160,4,31,redovna mesečna uplata za zakup kancelarija 5 nalog,0.902908
+2026-06-08T11:29:15,150,V2,pg_hnsw,m=32;ef_construction=128;ef_search=160,5,140,mesečna obaveza za zakup prostora označenog kao stan 12,0.898162
+2026-06-08T11:29:15,150,V2,pg_hnsw,m=32;ef_construction=128;ef_search=160,6,8,uplata za iznajmljeni garsonjera prema dogovorenom mesečnom iznosu,0.894922
+2026-06-08T11:29:15,150,V2,pg_hnsw,m=32;ef_construction=128;ef_search=160,7,102,mesečna obaveza za zakup prostora označenog kao stan b7 upl.,0.886819
+2026-06-08T11:29:15,150,V2,pg_hnsw,m=32;ef_construction=128;ef_search=160,8,71,mesečna obaveza po kreditu,0.872848
+2026-06-08T11:29:15,150,V2,pg_hnsw,m=32;ef_construction=128;ef_search=160,9,49,uplata za iznajmljeni stan 18 prema dogovorenom mesečnom iznosu trf.,0.866716
+2026-06-08T11:29:15,150,V2,pg_hnsw,m=32;ef_construction=128;ef_search=160,10,89,redovna uplata za najam stan b7 za mesec januar,0.866612
+2026-06-08T11:29:15,150,V3,pg_hnsw,m=32;ef_construction=128;ef_search=160,1,5,5,0.939436
+2026-06-08T11:29:15,150,V3,pg_hnsw,m=32;ef_construction=128;ef_search=160,2,10,10,0.939436
+2026-06-08T11:29:15,150,V3,pg_hnsw,m=32;ef_construction=128;ef_search=160,3,20,20,0.939436
+2026-06-08T11:29:15,150,V3,pg_hnsw,m=32;ef_construction=128;ef_search=160,4,29,29,0.939436
+2026-06-08T11:29:15,150,V1,pg_ivfflat,lists=100;probes=10,1,3,isplata zarade,0.924975
+2026-06-08T11:29:15,150,V1,pg_ivfflat,lists=100;probes=10,2,129,isplata zarade,0.924975
+2026-06-08T11:29:15,150,V1,pg_ivfflat,lists=100;probes=10,3,80,uplata plate,0.92429
+2026-06-08T11:29:15,150,V1,pg_ivfflat,lists=100;probes=10,4,93,uplata plate,0.92429
+2026-06-08T11:29:15,150,V1,pg_ivfflat,lists=100;probes=10,5,136,uplata plate,0.92429
+2026-06-08T11:29:15,150,V1,pg_ivfflat,lists=100;probes=10,6,21,honorarna isplata,0.921908
+2026-06-08T11:29:15,150,V1,pg_ivfflat,lists=100;probes=10,7,99,honorarna isplata,0.921908
+2026-06-08T11:29:15,150,V1,pg_ivfflat,lists=100;probes=10,8,100,plaćanje anuiteta,0.908697
+2026-06-08T11:29:15,150,V1,pg_ivfflat,lists=100;probes=10,9,20,plaćanje anuiteta,0.908697
+2026-06-08T11:29:15,150,V1,pg_ivfflat,lists=100;probes=10,10,105,uplata za komunalije,0.905076
+2026-06-08T11:29:15,150,V2,pg_ivfflat,lists=100;probes=10,1,107,uplata za iznajmljeni poslovni prostor prema dogovorenom mesečnom iznosu,0.950808
+2026-06-08T11:29:15,150,V2,pg_ivfflat,lists=100;probes=10,2,42,redovna uplata za najam poslovni prostor za mesec februar,0.920186
+2026-06-08T11:29:15,150,V2,pg_ivfflat,lists=100;probes=10,3,60,uplata stanodavcu za korišćenje poslovni prostor,0.919571
+2026-06-08T11:29:15,150,V2,pg_ivfflat,lists=100;probes=10,4,31,redovna mesečna uplata za zakup kancelarija 5 nalog,0.902908
+2026-06-08T11:29:15,150,V2,pg_ivfflat,lists=100;probes=10,5,140,mesečna obaveza za zakup prostora označenog kao stan 12,0.898162
+2026-06-08T11:29:15,150,V2,pg_ivfflat,lists=100;probes=10,6,8,uplata za iznajmljeni garsonjera prema dogovorenom mesečnom iznosu,0.894922
+2026-06-08T11:29:15,150,V2,pg_ivfflat,lists=100;probes=10,7,102,mesečna obaveza za zakup prostora označenog kao stan b7 upl.,0.886819
+2026-06-08T11:29:15,150,V2,pg_ivfflat,lists=100;probes=10,8,71,mesečna obaveza po kreditu,0.872848
+2026-06-08T11:29:15,150,V2,pg_ivfflat,lists=100;probes=10,9,49,uplata za iznajmljeni stan 18 prema dogovorenom mesečnom iznosu trf.,0.866716
+2026-06-08T11:29:15,150,V2,pg_ivfflat,lists=100;probes=10,10,89,redovna uplata za najam stan b7 za mesec januar,0.866612
+2026-06-08T11:29:15,150,V3,pg_ivfflat,lists=100;probes=10,1,5,5,0.939436
+2026-06-08T11:29:15,150,V3,pg_ivfflat,lists=100;probes=10,2,10,10,0.939436
+2026-06-08T11:29:15,150,V3,pg_ivfflat,lists=100;probes=10,3,20,20,0.939436
+2026-06-08T11:29:15,150,V3,pg_ivfflat,lists=100;probes=10,4,29,29,0.939436
+2026-06-08T11:29:15,150,V1,pg_ivfflat,lists=200;probes=20,1,3,isplata zarade,0.924975
+2026-06-08T11:29:15,150,V1,pg_ivfflat,lists=200;probes=20,2,129,isplata zarade,0.924975
+2026-06-08T11:29:15,150,V1,pg_ivfflat,lists=200;probes=20,3,80,uplata plate,0.92429
+2026-06-08T11:29:15,150,V1,pg_ivfflat,lists=200;probes=20,4,93,uplata plate,0.92429
+2026-06-08T11:29:15,150,V1,pg_ivfflat,lists=200;probes=20,5,136,uplata plate,0.92429
+2026-06-08T11:29:15,150,V1,pg_ivfflat,lists=200;probes=20,6,21,honorarna isplata,0.921908
+2026-06-08T11:29:15,150,V1,pg_ivfflat,lists=200;probes=20,7,99,honorarna isplata,0.921908
+2026-06-08T11:29:15,150,V1,pg_ivfflat,lists=200;probes=20,8,100,plaćanje anuiteta,0.908697
+2026-06-08T11:29:15,150,V1,pg_ivfflat,lists=200;probes=20,9,20,plaćanje anuiteta,0.908697
+2026-06-08T11:29:15,150,V1,pg_ivfflat,lists=200;probes=20,10,105,uplata za komunalije,0.905076
+2026-06-08T11:29:15,150,V2,pg_ivfflat,lists=200;probes=20,1,107,uplata za iznajmljeni poslovni prostor prema dogovorenom mesečnom iznosu,0.950808
+2026-06-08T11:29:15,150,V2,pg_ivfflat,lists=200;probes=20,2,42,redovna uplata za najam poslovni prostor za mesec februar,0.920186
+2026-06-08T11:29:15,150,V2,pg_ivfflat,lists=200;probes=20,3,60,uplata stanodavcu za korišćenje poslovni prostor,0.919571
+2026-06-08T11:29:15,150,V2,pg_ivfflat,lists=200;probes=20,4,31,redovna mesečna uplata za zakup kancelarija 5 nalog,0.902908
+2026-06-08T11:29:15,150,V2,pg_ivfflat,lists=200;probes=20,5,140,mesečna obaveza za zakup prostora označenog kao stan 12,0.898162
+2026-06-08T11:29:15,150,V2,pg_ivfflat,lists=200;probes=20,6,8,uplata za iznajmljeni garsonjera prema dogovorenom mesečnom iznosu,0.894922
+2026-06-08T11:29:15,150,V2,pg_ivfflat,lists=200;probes=20,7,102,mesečna obaveza za zakup prostora označenog kao stan b7 upl.,0.886819
+2026-06-08T11:29:15,150,V2,pg_ivfflat,lists=200;probes=20,8,71,mesečna obaveza po kreditu,0.872848
+2026-06-08T11:29:15,150,V2,pg_ivfflat,lists=200;probes=20,9,49,uplata za iznajmljeni stan 18 prema dogovorenom mesečnom iznosu trf.,0.866716
+2026-06-08T11:29:15,150,V2,pg_ivfflat,lists=200;probes=20,10,89,redovna uplata za najam stan b7 za mesec januar,0.866612
+2026-06-08T11:29:15,150,V3,pg_ivfflat,lists=200;probes=20,1,5,5,0.939436
+2026-06-08T11:29:15,150,V3,pg_ivfflat,lists=200;probes=20,2,10,10,0.939436
+2026-06-08T11:29:15,150,V3,pg_ivfflat,lists=200;probes=20,3,20,20,0.939436
+2026-06-08T11:29:15,150,V3,pg_ivfflat,lists=200;probes=20,4,29,29,0.939436
+2026-06-08T11:29:15,150,V1,pg_ivfflat,lists=400;probes=40,1,3,isplata zarade,0.924975
+2026-06-08T11:29:15,150,V1,pg_ivfflat,lists=400;probes=40,2,129,isplata zarade,0.924975
+2026-06-08T11:29:15,150,V1,pg_ivfflat,lists=400;probes=40,3,80,uplata plate,0.92429
+2026-06-08T11:29:15,150,V1,pg_ivfflat,lists=400;probes=40,4,93,uplata plate,0.92429
+2026-06-08T11:29:15,150,V1,pg_ivfflat,lists=400;probes=40,5,136,uplata plate,0.92429
+2026-06-08T11:29:15,150,V1,pg_ivfflat,lists=400;probes=40,6,21,honorarna isplata,0.921908
+2026-06-08T11:29:15,150,V1,pg_ivfflat,lists=400;probes=40,7,99,honorarna isplata,0.921908
+2026-06-08T11:29:15,150,V1,pg_ivfflat,lists=400;probes=40,8,100,plaćanje anuiteta,0.908697
+2026-06-08T11:29:15,150,V1,pg_ivfflat,lists=400;probes=40,9,20,plaćanje anuiteta,0.908697
+2026-06-08T11:29:15,150,V1,pg_ivfflat,lists=400;probes=40,10,105,uplata za komunalije,0.905076
+2026-06-08T11:29:15,150,V2,pg_ivfflat,lists=400;probes=40,1,107,uplata za iznajmljeni poslovni prostor prema dogovorenom mesečnom iznosu,0.950808
+2026-06-08T11:29:15,150,V2,pg_ivfflat,lists=400;probes=40,2,42,redovna uplata za najam poslovni prostor za mesec februar,0.920186
+2026-06-08T11:29:15,150,V2,pg_ivfflat,lists=400;probes=40,3,60,uplata stanodavcu za korišćenje poslovni prostor,0.919571
+2026-06-08T11:29:15,150,V2,pg_ivfflat,lists=400;probes=40,4,31,redovna mesečna uplata za zakup kancelarija 5 nalog,0.902908
+2026-06-08T11:29:15,150,V2,pg_ivfflat,lists=400;probes=40,5,140,mesečna obaveza za zakup prostora označenog kao stan 12,0.898162
+2026-06-08T11:29:15,150,V2,pg_ivfflat,lists=400;probes=40,6,8,uplata za iznajmljeni garsonjera prema dogovorenom mesečnom iznosu,0.894922
+2026-06-08T11:29:15,150,V2,pg_ivfflat,lists=400;probes=40,7,102,mesečna obaveza za zakup prostora označenog kao stan b7 upl.,0.886819
+2026-06-08T11:29:15,150,V2,pg_ivfflat,lists=400;probes=40,8,71,mesečna obaveza po kreditu,0.872848
+2026-06-08T11:29:15,150,V2,pg_ivfflat,lists=400;probes=40,9,49,uplata za iznajmljeni stan 18 prema dogovorenom mesečnom iznosu trf.,0.866716
+2026-06-08T11:29:15,150,V2,pg_ivfflat,lists=400;probes=40,10,89,redovna uplata za najam stan b7 za mesec januar,0.866612
+2026-06-08T11:29:15,150,V3,pg_ivfflat,lists=400;probes=40,1,5,5,0.939436
+2026-06-08T11:29:15,150,V3,pg_ivfflat,lists=400;probes=40,2,10,10,0.939436
+2026-06-08T11:29:15,150,V3,pg_ivfflat,lists=400;probes=40,3,20,20,0.939436
+2026-06-08T11:29:15,150,V3,pg_ivfflat,lists=400;probes=40,4,29,29,0.939436
+2026-06-08T11:29:15,150,V1,neo4j_hnsw,m=16;ef_construction=100;quantization=true,1,3,isplata zarade,0.962106
+2026-06-08T11:29:15,150,V1,neo4j_hnsw,m=16;ef_construction=100;quantization=true,2,129,isplata zarade,0.962106
+2026-06-08T11:29:15,150,V1,neo4j_hnsw,m=16;ef_construction=100;quantization=true,3,80,uplata plate,0.961693
+2026-06-08T11:29:15,150,V1,neo4j_hnsw,m=16;ef_construction=100;quantization=true,4,93,uplata plate,0.961693
+2026-06-08T11:29:15,150,V1,neo4j_hnsw,m=16;ef_construction=100;quantization=true,5,136,uplata plate,0.961693
+2026-06-08T11:29:15,150,V1,neo4j_hnsw,m=16;ef_construction=100;quantization=true,6,21,honorarna isplata,0.9603
+2026-06-08T11:29:15,150,V1,neo4j_hnsw,m=16;ef_construction=100;quantization=true,7,99,honorarna isplata,0.9603
+2026-06-08T11:29:15,150,V1,neo4j_hnsw,m=16;ef_construction=100;quantization=true,8,20,plaćanje anuiteta,0.953911
+2026-06-08T11:29:15,150,V1,neo4j_hnsw,m=16;ef_construction=100;quantization=true,9,100,plaćanje anuiteta,0.953911
+2026-06-08T11:29:15,150,V1,neo4j_hnsw,m=16;ef_construction=100;quantization=true,10,105,uplata za komunalije,0.952147
+2026-06-08T11:29:15,150,V2,neo4j_hnsw,m=16;ef_construction=100;quantization=true,1,107,uplata za iznajmljeni poslovni prostor prema dogovorenom mesečnom iznosu,0.975011
+2026-06-08T11:29:15,150,V2,neo4j_hnsw,m=16;ef_construction=100;quantization=true,2,42,redovna uplata za najam poslovni prostor za mesec februar,0.959757
+2026-06-08T11:29:15,150,V2,neo4j_hnsw,m=16;ef_construction=100;quantization=true,3,60,uplata stanodavcu za korišćenje poslovni prostor,0.959163
+2026-06-08T11:29:15,150,V2,neo4j_hnsw,m=16;ef_construction=100;quantization=true,4,31,redovna mesečna uplata za zakup kancelarija 5 nalog,0.951139
+2026-06-08T11:29:15,150,V2,neo4j_hnsw,m=16;ef_construction=100;quantization=true,5,140,mesečna obaveza za zakup prostora označenog kao stan 12,0.948631
+2026-06-08T11:29:15,150,V2,neo4j_hnsw,m=16;ef_construction=100;quantization=true,6,8,uplata za iznajmljeni garsonjera prema dogovorenom mesečnom iznosu,0.947199
+2026-06-08T11:29:15,150,V2,neo4j_hnsw,m=16;ef_construction=100;quantization=true,7,102,mesečna obaveza za zakup prostora označenog kao stan b7 upl.,0.942657
+2026-06-08T11:29:15,150,V2,neo4j_hnsw,m=16;ef_construction=100;quantization=true,8,71,mesečna obaveza po kreditu,0.935862
+2026-06-08T11:29:15,150,V2,neo4j_hnsw,m=16;ef_construction=100;quantization=true,9,49,uplata za iznajmljeni stan 18 prema dogovorenom mesečnom iznosu trf.,0.933144
+2026-06-08T11:29:15,150,V2,neo4j_hnsw,m=16;ef_construction=100;quantization=true,10,89,redovna uplata za najam stan b7 za mesec januar,0.933074
+2026-06-08T11:29:15,150,V3,neo4j_hnsw,m=16;ef_construction=100;quantization=true,1,5,GB11YSWA96705466889373,0.96907
+2026-06-08T11:29:15,150,V3,neo4j_hnsw,m=16;ef_construction=100;quantization=true,2,10,GB43UHDW49190586518506,0.96907
+2026-06-08T11:29:15,150,V3,neo4j_hnsw,m=16;ef_construction=100;quantization=true,3,20,GB55HJWJ71349361832421,0.96907
+2026-06-08T11:29:15,150,V3,neo4j_hnsw,m=16;ef_construction=100;quantization=true,4,29,GB36VZUE70289517187026,0.96907
+2026-06-08T11:29:15,150,V1,neo4j_hnsw,m=24;ef_construction=160;quantization=true,1,3,isplata zarade,0.962106
+2026-06-08T11:29:15,150,V1,neo4j_hnsw,m=24;ef_construction=160;quantization=true,2,129,isplata zarade,0.962106
+2026-06-08T11:29:15,150,V1,neo4j_hnsw,m=24;ef_construction=160;quantization=true,3,80,uplata plate,0.961693
+2026-06-08T11:29:15,150,V1,neo4j_hnsw,m=24;ef_construction=160;quantization=true,4,93,uplata plate,0.961693
+2026-06-08T11:29:15,150,V1,neo4j_hnsw,m=24;ef_construction=160;quantization=true,5,136,uplata plate,0.961693
+2026-06-08T11:29:15,150,V1,neo4j_hnsw,m=24;ef_construction=160;quantization=true,6,21,honorarna isplata,0.9603
+2026-06-08T11:29:15,150,V1,neo4j_hnsw,m=24;ef_construction=160;quantization=true,7,99,honorarna isplata,0.9603
+2026-06-08T11:29:15,150,V1,neo4j_hnsw,m=24;ef_construction=160;quantization=true,8,20,plaćanje anuiteta,0.953911
+2026-06-08T11:29:15,150,V1,neo4j_hnsw,m=24;ef_construction=160;quantization=true,9,100,plaćanje anuiteta,0.953911
+2026-06-08T11:29:15,150,V1,neo4j_hnsw,m=24;ef_construction=160;quantization=true,10,105,uplata za komunalije,0.952147
+2026-06-08T11:29:15,150,V2,neo4j_hnsw,m=24;ef_construction=160;quantization=true,1,107,uplata za iznajmljeni poslovni prostor prema dogovorenom mesečnom iznosu,0.975011
+2026-06-08T11:29:15,150,V2,neo4j_hnsw,m=24;ef_construction=160;quantization=true,2,42,redovna uplata za najam poslovni prostor za mesec februar,0.959757
+2026-06-08T11:29:15,150,V2,neo4j_hnsw,m=24;ef_construction=160;quantization=true,3,60,uplata stanodavcu za korišćenje poslovni prostor,0.959163
+2026-06-08T11:29:15,150,V2,neo4j_hnsw,m=24;ef_construction=160;quantization=true,4,31,redovna mesečna uplata za zakup kancelarija 5 nalog,0.951139
+2026-06-08T11:29:15,150,V2,neo4j_hnsw,m=24;ef_construction=160;quantization=true,5,140,mesečna obaveza za zakup prostora označenog kao stan 12,0.948631
+2026-06-08T11:29:15,150,V2,neo4j_hnsw,m=24;ef_construction=160;quantization=true,6,8,uplata za iznajmljeni garsonjera prema dogovorenom mesečnom iznosu,0.947199
+2026-06-08T11:29:15,150,V2,neo4j_hnsw,m=24;ef_construction=160;quantization=true,7,102,mesečna obaveza za zakup prostora označenog kao stan b7 upl.,0.942657
+2026-06-08T11:29:15,150,V2,neo4j_hnsw,m=24;ef_construction=160;quantization=true,8,71,mesečna obaveza po kreditu,0.935862
+2026-06-08T11:29:15,150,V2,neo4j_hnsw,m=24;ef_construction=160;quantization=true,9,49,uplata za iznajmljeni stan 18 prema dogovorenom mesečnom iznosu trf.,0.933144
+2026-06-08T11:29:15,150,V2,neo4j_hnsw,m=24;ef_construction=160;quantization=true,10,89,redovna uplata za najam stan b7 za mesec januar,0.933074
+2026-06-08T11:29:15,150,V3,neo4j_hnsw,m=24;ef_construction=160;quantization=true,1,5,GB11YSWA96705466889373,0.96907
+2026-06-08T11:29:15,150,V3,neo4j_hnsw,m=24;ef_construction=160;quantization=true,2,10,GB43UHDW49190586518506,0.96907
+2026-06-08T11:29:15,150,V3,neo4j_hnsw,m=24;ef_construction=160;quantization=true,3,20,GB55HJWJ71349361832421,0.96907
+2026-06-08T11:29:15,150,V3,neo4j_hnsw,m=24;ef_construction=160;quantization=true,4,29,GB36VZUE70289517187026,0.96907
+2026-06-08T11:29:15,150,V1,neo4j_hnsw,m=32;ef_construction=200;quantization=false,1,3,isplata zarade,0.962488
+2026-06-08T11:29:15,150,V1,neo4j_hnsw,m=32;ef_construction=200;quantization=false,2,129,isplata zarade,0.962488
+2026-06-08T11:29:15,150,V1,neo4j_hnsw,m=32;ef_construction=200;quantization=false,3,80,uplata plate,0.962145
+2026-06-08T11:29:15,150,V1,neo4j_hnsw,m=32;ef_construction=200;quantization=false,4,93,uplata plate,0.962145
+2026-06-08T11:29:15,150,V1,neo4j_hnsw,m=32;ef_construction=200;quantization=false,5,136,uplata plate,0.962145
+2026-06-08T11:29:15,150,V1,neo4j_hnsw,m=32;ef_construction=200;quantization=false,6,21,honorarna isplata,0.960954
+2026-06-08T11:29:15,150,V1,neo4j_hnsw,m=32;ef_construction=200;quantization=false,7,99,honorarna isplata,0.960954
+2026-06-08T11:29:15,150,V1,neo4j_hnsw,m=32;ef_construction=200;quantization=false,8,20,plaćanje anuiteta,0.954348
+2026-06-08T11:29:15,150,V1,neo4j_hnsw,m=32;ef_construction=200;quantization=false,9,100,plaćanje anuiteta,0.954348
+2026-06-08T11:29:15,150,V1,neo4j_hnsw,m=32;ef_construction=200;quantization=false,10,105,uplata za komunalije,0.952538
+2026-06-08T11:29:15,150,V2,neo4j_hnsw,m=32;ef_construction=200;quantization=false,1,107,uplata za iznajmljeni poslovni prostor prema dogovorenom mesečnom iznosu,0.975404
+2026-06-08T11:29:15,150,V2,neo4j_hnsw,m=32;ef_construction=200;quantization=false,2,42,redovna uplata za najam poslovni prostor za mesec februar,0.960093
+2026-06-08T11:29:15,150,V2,neo4j_hnsw,m=32;ef_construction=200;quantization=false,3,60,uplata stanodavcu za korišćenje poslovni prostor,0.959785
+2026-06-08T11:29:15,150,V2,neo4j_hnsw,m=32;ef_construction=200;quantization=false,4,31,redovna mesečna uplata za zakup kancelarija 5 nalog,0.951454
+2026-06-08T11:29:15,150,V2,neo4j_hnsw,m=32;ef_construction=200;quantization=false,5,140,mesečna obaveza za zakup prostora označenog kao stan 12,0.949081
+2026-06-08T11:29:15,150,V2,neo4j_hnsw,m=32;ef_construction=200;quantization=false,6,8,uplata za iznajmljeni garsonjera prema dogovorenom mesečnom iznosu,0.947461
+2026-06-08T11:29:15,150,V2,neo4j_hnsw,m=32;ef_construction=200;quantization=false,7,102,mesečna obaveza za zakup prostora označenog kao stan b7 upl.,0.943409
+2026-06-08T11:29:15,150,V2,neo4j_hnsw,m=32;ef_construction=200;quantization=false,8,71,mesečna obaveza po kreditu,0.936424
+2026-06-08T11:29:15,150,V2,neo4j_hnsw,m=32;ef_construction=200;quantization=false,9,49,uplata za iznajmljeni stan 18 prema dogovorenom mesečnom iznosu trf.,0.933358
+2026-06-08T11:29:15,150,V2,neo4j_hnsw,m=32;ef_construction=200;quantization=false,10,89,redovna uplata za najam stan b7 za mesec januar,0.933306
+2026-06-08T11:29:15,150,V3,neo4j_hnsw,m=32;ef_construction=200;quantization=false,1,5,GB11YSWA96705466889373,0.969718
+2026-06-08T11:29:15,150,V3,neo4j_hnsw,m=32;ef_construction=200;quantization=false,2,10,GB43UHDW49190586518506,0.969718
+2026-06-08T11:29:15,150,V3,neo4j_hnsw,m=32;ef_construction=200;quantization=false,3,20,GB55HJWJ71349361832421,0.969718
+2026-06-08T11:29:15,150,V3,neo4j_hnsw,m=32;ef_construction=200;quantization=false,4,29,GB36VZUE70289517187026,0.969718

@@ -1,0 +1,31 @@
+vreme_pokretanja,scale,oznaka_upita,naziv_upita,metod,parametri,avg_ms,p50_ms,p95_ms,build_ms,index_size_bytes,insert_ms,recall_at_k,overlap_at_k
+2026-06-08T11:29:15,150,V1,Čista semantička pretraga,pg_exact,exact,1.266,1.266,1.302,0.0,0,0.0,1.0,1.0
+2026-06-08T11:29:15,150,V2,Semantika i atributski filteri,pg_exact,exact,0.798,0.798,0.818,0.0,0,0.0,1.0,1.0
+2026-06-08T11:29:15,150,V3,Semantika i graf ciklus,pg_exact,exact,3.953,3.953,4.056,0.0,0,0.0,1.0,1.0
+2026-06-08T11:29:15,150,V1,Čista semantička pretraga,pg_hnsw,m=16;ef_construction=64;ef_search=80,1.219,1.219,1.225,43.105,409600,102.963,1.0,1.0
+2026-06-08T11:29:15,150,V2,Semantika i atributski filteri,pg_hnsw,m=16;ef_construction=64;ef_search=80,0.902,0.902,0.942,43.105,409600,102.963,1.0,1.0
+2026-06-08T11:29:15,150,V3,Semantika i graf ciklus,pg_hnsw,m=16;ef_construction=64;ef_search=80,3.75,3.75,3.879,43.105,409600,102.963,1.0,0.4
+2026-06-08T11:29:15,150,V1,Čista semantička pretraga,pg_hnsw,m=24;ef_construction=96;ef_search=120,2.363,2.363,2.736,34.984,417792,112.905,1.0,1.0
+2026-06-08T11:29:15,150,V2,Semantika i atributski filteri,pg_hnsw,m=24;ef_construction=96;ef_search=120,1.772,1.772,1.778,34.984,417792,112.905,1.0,1.0
+2026-06-08T11:29:15,150,V3,Semantika i graf ciklus,pg_hnsw,m=24;ef_construction=96;ef_search=120,10.191,10.191,10.767,34.984,417792,112.905,1.0,0.4
+2026-06-08T11:29:15,150,V1,Čista semantička pretraga,pg_hnsw,m=32;ef_construction=128;ef_search=160,1.139,1.139,1.162,47.312,442368,175.069,1.0,1.0
+2026-06-08T11:29:15,150,V2,Semantika i atributski filteri,pg_hnsw,m=32;ef_construction=128;ef_search=160,0.879,0.879,0.897,47.312,442368,175.069,1.0,1.0
+2026-06-08T11:29:15,150,V3,Semantika i graf ciklus,pg_hnsw,m=32;ef_construction=128;ef_search=160,3.734,3.734,3.881,47.312,442368,175.069,1.0,0.4
+2026-06-08T11:29:15,150,V1,Čista semantička pretraga,pg_ivfflat,lists=100;probes=10,1.257,1.257,1.294,61.071,1343488,43.593,1.0,1.0
+2026-06-08T11:29:15,150,V2,Semantika i atributski filteri,pg_ivfflat,lists=100;probes=10,0.821,0.821,0.893,61.071,1343488,43.593,1.0,1.0
+2026-06-08T11:29:15,150,V3,Semantika i graf ciklus,pg_ivfflat,lists=100;probes=10,4.514,4.514,4.699,61.071,1343488,43.593,1.0,0.4
+2026-06-08T11:29:15,150,V1,Čista semantička pretraga,pg_ivfflat,lists=200;probes=20,1.153,1.153,1.183,64.843,2572288,38.542,1.0,1.0
+2026-06-08T11:29:15,150,V2,Semantika i atributski filteri,pg_ivfflat,lists=200;probes=20,0.835,0.835,0.836,64.843,2572288,38.542,1.0,1.0
+2026-06-08T11:29:15,150,V3,Semantika i graf ciklus,pg_ivfflat,lists=200;probes=20,3.513,3.513,3.528,64.843,2572288,38.542,1.0,0.4
+2026-06-08T11:29:15,150,V1,Čista semantička pretraga,pg_ivfflat,lists=400;probes=40,1.159,1.159,1.2,168.323,5029888,38.167,1.0,1.0
+2026-06-08T11:29:15,150,V2,Semantika i atributski filteri,pg_ivfflat,lists=400;probes=40,0.767,0.767,0.777,168.323,5029888,38.167,1.0,1.0
+2026-06-08T11:29:15,150,V3,Semantika i graf ciklus,pg_ivfflat,lists=400;probes=40,3.365,3.365,3.366,168.323,5029888,38.167,1.0,0.4
+2026-06-08T11:29:15,150,V1,Čista semantička pretraga,neo4j_hnsw,m=16;ef_construction=100;quantization=true,6.391,6.391,6.87,173.733,,200.172,1.0,1.0
+2026-06-08T11:29:15,150,V2,Semantika i atributski filteri,neo4j_hnsw,m=16;ef_construction=100;quantization=true,10.47,10.47,11.533,173.733,,200.172,1.0,1.0
+2026-06-08T11:29:15,150,V3,Semantika i graf ciklus,neo4j_hnsw,m=16;ef_construction=100;quantization=true,9.25,9.25,9.725,173.733,,200.172,1.0,0.4
+2026-06-08T11:29:15,150,V1,Čista semantička pretraga,neo4j_hnsw,m=24;ef_construction=160;quantization=true,6.411,6.411,6.464,273.635,,184.21,1.0,1.0
+2026-06-08T11:29:15,150,V2,Semantika i atributski filteri,neo4j_hnsw,m=24;ef_construction=160;quantization=true,7.515,7.515,7.542,273.635,,184.21,1.0,1.0
+2026-06-08T11:29:15,150,V3,Semantika i graf ciklus,neo4j_hnsw,m=24;ef_construction=160;quantization=true,9.526,9.526,9.83,273.635,,184.21,1.0,0.4
+2026-06-08T11:29:15,150,V1,Čista semantička pretraga,neo4j_hnsw,m=32;ef_construction=200;quantization=false,5.087,5.087,5.146,243.938,,165.391,1.0,1.0
+2026-06-08T11:29:15,150,V2,Semantika i atributski filteri,neo4j_hnsw,m=32;ef_construction=200;quantization=false,6.762,6.762,7.006,243.938,,165.391,1.0,1.0
+2026-06-08T11:29:15,150,V3,Semantika i graf ciklus,neo4j_hnsw,m=32;ef_construction=200;quantization=false,7.776,7.776,8.036,243.938,,165.391,1.0,0.4
